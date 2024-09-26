@@ -1,0 +1,73 @@
+%!TEX root = ../ZF-Introduction_to_Photonics-lukwidmer.tex
+\mySection{Basics of wave theory}
+
+\vspace{2mm}
+\normalsize\textbf{General}\small
+\hrule
+\vspace{2pt}
+% @formatter:off
+{
+	\setlength{\extrarowheight}{4pt}
+	\begin{tabular}{l l}
+		electric permittivity: & $\varepsilon_0 = 8.85\textsc{e}-12 \unit[2]{\frac{F}{m}}$          \\
+		magnetic permeability: & $\mu_0=4\pi\textsc{e}-7 \unit[2]{\frac{H}{m}}$                     \\
+		wavelength:            & $\lambda_0 \unit[2]{m}$                                            \\
+		wave number:           & $k=\frac{2\pi}{\lambda_0}$                                         \\
+		                       & $\phantom{k } = \sqrt{k_x^2+k_y^2+k_z^2} \unit[2]{\frac{1}{m}}$    \\
+		Temporal period:       & $T = \frac{\lambda_0}{v}$                                          \\
+		frequency:             & $f= \frac{1}{f}$                                                   \\
+		Angular frequency:     & $\omega = 2\pi f$                                                  \\
+		plane wave:            & $\Psi(\vv{r},t) = Ae^{i(\vv{k}\cdot \vv{r} - \omega t + \varphi)}$ \\
+		uncertainty:           & $\Delta x \Delta k_x \geq \frac{1}{2}$
+	\end{tabular}\newline
+}
+% @formatter:on
+($_0$: vacuum, $_r$: relative)
+
+\vspace{2mm}
+\normalsize\textbf{Differential wave equation for 1D system}\small
+\hrule
+\vspace{2pt}
+\myBox{
+	$$ \nabla^2 \Psi = \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} \hspace{2em}\text{or}\hspace{2em} \nabla^2 \Psi - \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} = 0$$
+}
+with 1D version:
+$$ \frac{\partial^2\Psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} \hspace{2em}\text{or}\hspace{2em} \nabla^2 \Psi - \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} = 0$$
+
+\vspace{2mm}
+\normalsize\textbf{Helmholtz equation}\small
+\hrule
+\vspace{2pt}
+\myBox{
+	$$ (\nabla^2 + k^2)X(x) = 0 $$
+}
+with $\Psi(x,t) = Ae^{i(kx-\omega t + \varphi)} = \underbrace{Ae^{i(kx+\varphi)}}_{X(x)}\underbrace{e^{-i\omega t}}_{T(t)} = X(x)T(t)$ and $k^2 = \frac{\omega^2}{v^2}$
+
+
+\WhiteSpace
+
+\mySubsection{Fourier Decomposition}{3}{
+the 2D Fourier transform $\mathbf{\hat E}$ of the electric field $\mathbf{E}$:
+\scriptsize
+$$ \mathbf{\hat E}(k_x, k_y, z) = \frac{1}{2\pi} \iint_{-\infty}^\infty \mathbf{E}(x,y,z)e^{-i[k_x x + k_y y]} \mathrm{d}x\mathrm{d}y$$
+\small
+Similarly, the inverse Fourier transform reads as:
+\scriptsize
+$$ \mathbf{E}(x, y, z) = \frac{1}{2\pi} \iint_{-\infty}^\infty \mathbf{\hat E}(k_x,k_y,z)e^{i[k_x x + k_y y]} \mathrm{d}k_x\mathrm{d}k_y$$
+\small
+Assuming $\mathbf{E}(r)$ is time-harmonic\newline
+\scriptsize(i.e. $\mathbf{\hat E}(k_x, k_y, z) = \mathbf{\hat E}(k_x,k_y,0) e^{\pm ik_zz}$ )\small
+\myBox{
+
+	\scriptsize
+	\begin{align*}
+		 & \mathbf{E}(x, y, z) =                                                                                                          \\
+		 & \frac{1}{2\pi} \iint_{-\infty}^\infty \mathbf{\hat E}(k_x,k_y,0) e^{i[k_x x + k_y y]} e^{\pm ik_zz} \mathrm{d}k_x\mathrm{d}k_y
+	\end{align*}
+	\small
+}
+Fourier decomposition of the scattered field at $z = 0$:
+$$\mathbf{\hat E}(k_x,k_y,0) e^{i[k_x x + k_y y]}$$
+Propagator term:
+$$e^{\pm ik_zz}$$
+}
