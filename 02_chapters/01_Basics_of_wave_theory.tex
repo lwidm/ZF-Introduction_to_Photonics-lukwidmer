@@ -25,11 +25,24 @@
 ($_0$: vacuum, $_r$: relative)
 
 \vspace{2mm}
+\normalsize\textbf{Helmholtz equation}\small
+\hrule
+% @formatter:off
+{
+	\setlength{\extrarowheight}{4pt}
+	\begin{tabular}{l l}
+		plane wave (cplx): & \tiny$\vv{\Psi}(\vv{r},t) = \vv{A}e^{i(\vv{k}\cdot \vv{r} - \omega t + \varphi)}$\small \\
+		plane wave (real): & \tiny$\vv{\Psi}(\vv{r},t) = \vv{A}\cos(\vv{k}\cdot \vv{r} - \omega t + \varphi)$\small  \\
+	\end{tabular}\newline
+}
+% @formatter:on
+
+\vspace{2mm}
 \normalsize\textbf{Differential wave equation for 1D system}\small
 \hrule
 \vspace{2pt}
 \myBox{
-	$$ \nabla^2 \Psi = \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} \hspace{2em}\text{or}\hspace{2em} \nabla^2 \Psi - \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} = 0$$
+	$$ \nabla^2 \vv{\Psi} = \frac{1}{v^2} \frac{\partial^2\vv{\Psi}}{\partial t^2} \hspace{2em}\text{or}\hspace{2em} \nabla^2 \vv{\Psi} - \frac{1}{v^2} \frac{\partial^2\vv{\Psi}}{\partial t^2} = 0$$
 }
 with 1D version:
 $$ \frac{\partial^2\Psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} \hspace{2em}\text{or}\hspace{2em} \nabla^2 \Psi - \frac{1}{v^2} \frac{\partial^2\Psi}{\partial t^2} = 0$$
@@ -39,9 +52,9 @@ $$ \frac{\partial^2\Psi}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2\Psi}{\pa
 \hrule
 \vspace{2pt}
 \myBox{
-	$$ (\nabla^2 + k^2)X(x) = 0 $$
+	$$ (\nabla^2 + \vv{k}^2)\vv{X}(\vv{x}) = 0 $$
 }
-with $\Psi(x,t) = Ae^{i(kx-\omega t + \varphi)} = \underbrace{Ae^{i(kx+\varphi)}}_{X(x)}\underbrace{e^{-i\omega t}}_{T(t)} = X(x)T(t)$ and $k^2 = \frac{\omega^2}{v^2}$
+with $\vv{\Psi}(\vv{x},t) = \vv{A}e^{i(\vv{k}\vv{x}-\omega t + \varphi)} = \underbrace{\vv{A}e^{i(\vv{k}\vv{x}+\varphi)}}_{\vv{X}(\vv{x})}\underbrace{e^{-i\omega t}}_{T(t)} = \vv{X}(\vv{x})T(t)$ and $k^2 = \frac{\omega^2}{v^2}$
 
 
 \WhiteSpace

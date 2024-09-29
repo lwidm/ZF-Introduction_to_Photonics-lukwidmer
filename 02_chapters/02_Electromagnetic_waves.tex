@@ -1,0 +1,47 @@
+%!TEX root = ../ZF-Introduction_to_Photonics-lukwidmer.tex
+\mySection{Electromagnetic waves}
+\vspace{2mm}
+\normalsize\textbf{Wave equation for electromagnetic waves}\small
+\hrule
+\begin{align*}
+	\nabla^2 \vv{E} - \mu_0\varepsilon_0 \frac{\partial^2 \vv{E}}{\partial t^2} = 0 \\
+	\nabla^2 \vv{B} - \mu_0\varepsilon_0 \frac{\partial^2 \vv{B}}{\partial t^2} = 0 \\
+\end{align*}
+
+\WhiteSpace
+
+\mySubsection{Maxwell Equations}{3}{
+	\vspace{2mm}
+	\normalsize\textbf{Gauss' law for electric fields}\small
+	\hrule
+	\myBox {
+		$$\nabla \cdot \vv{E} = \frac{\varrho}{\varepsilon_0}$$
+	}
+	The number of electric field lines passing through a closed surface is proportional to the electric charge enclosed by the surface is a proportional to the electric charge enclosed by the surface. An isolated positive charge generates a divergent electric field.
+
+	\vspace{2mm}
+	\normalsize\textbf{Gauss' law for magnetic fields}\small
+	\hrule
+	\myBox {
+		$$\nabla \cdot \vv{E} = \frac{\varrho}{\varepsilon_0}$$
+	}
+	There is no isolated "magnetic charge". The magnetic field lines circulate back on themselves.
+
+	\vspace{2mm}
+	\normalsize\textbf{Faraday's law}\small
+	\hrule
+	\myBox {
+		$$ \vv{nabla} \times \vv{E} = - \partialdiff{\vv{B}}{t}$$
+	}
+	A time varying magnetic field generates a circulating electric field.
+
+	\vspace{2mm}
+	\normalsize\textbf{Ampère-Maxwell law}\small
+	\hrule
+	\myBox {
+		$$ \nabla \times \vv{B} = \mu_0 \codt \vv{J} + \mu_0 \varepsilon_0 \partialdiff{\vv{E}}{t}$$
+	}
+	A circulating magnetic field can be generated either by an electric current or by a time varying electric field.
+
+
+}
