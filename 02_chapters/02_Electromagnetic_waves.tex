@@ -152,3 +152,96 @@
 	}
 
 }
+
+\mySubsection{Nonliniear Optics}{3}{
+Nonliniear opctics arise from the fact that polarization density $P$ may be expanded as a Taylor series:
+$$P = \underbrace{\varepsilon_0\chi E}_{\text{linear terms}} + \underbrace{\varepsilon_0\chi^{(2)} E^2 + \varepsilon_0\chi^{(3)} E^3 + \dots}_{\text{nonlinear terms}}$$
+}
+\mySubsection{Polarization}{3}{
+\textbf{linear polarized light}\newline
+In this case the two (orthogonal) waves have to be in phase (i.e. $\varphi = 0 \pm 2\pi$). The superpostion can be written as\newline
+$\underline{E}(z,t) = (\underline(e)_x \cdot E_{0x} + \underline{e}_y E_{0y} ) \cos(kz-\omega t),$\newline
+$\theta = tan^{-1}\left(\frac{E_{0y}}{E_{0x}}\right)$\newline
+In other words the amplitude and angle are fixed.\newline
+\newline
+
+\textbf{Circular polarized light}\newline
+In this case the amplitude of two orthogonal waves are equal ($E_{0x} = E_{0y} = E_0$) but the phase is different by $\varphi=\pm\frac{\pi}{2}+2\pi n, \hspace{2pt} n \in \mathcal{Z}^0$. This is expressed by:
+$ \underline{E}(z,t) = E_0 (\underline{e}_x \cos(kz - \omega t) \mp \underline{e}_y \sin(kz - \omega t))$
+This represents an electric field that rotates (with constant amplitude) around the direction of propagation. Thereby one distinguishes between right-circular polarized ($\varphi = -\pi/2$) and left-circular polarized ($varphi = +\pi/2$).\newline
+\newline
+
+\textbf{Elliptical polarized light}\newline
+Most general case. Here $\varphi$ is not restricted to a special value. Therefore the observed elliptical field will not only rotate, but also change in amplitude.\newline
+
+
+\vspace{2mm}
+\normalsize\textbf{Wave plates}\small
+\hrule
+\vspace{2pt}
+\textbf{Half wave plate ($\Delta\varphi=\frac{\pi}{2}$)}\newline
+Introduces a phase difference of $\pi/2$ between slow \& fast axes. It can transform one linear polarized wave into another, or invert the handedness of circular polarization.\newline
+\newline
+
+\textbf{Quarter wave plate ($\Delta\varphi = \frac{\pi}{4}$)}\newline
+Introduces a phase difference of $\pi/4$ between the slow and the fast axes. In practice, it can transform linear polarization into elliptical (including circular) polarization and vice versa.
+
+\myBox{
+	$$\Delta\varphi = \frac{2\pi}{\lambda_0} d \cdot (|n_o, n_e|)$$
+	o: ordinary ray\newline
+	e: extraordinary ray
+}
+\textbf{Recipe:}
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+	\item Identify wavefunction after wave plate:\newline
+	      Since only the \underline{difference} in phase matters we define shift to occur in slow axis (where the slow wave is shifted backwards
+	      \vspace{1pt}\newline
+	      \textbf{Half wave plate}\newline
+	      \phantom{ } slow (i.e. $E_s \parallel \hat s, \bot \hat f$) $\rightarrow$ $E_s = E_{0s} e^{i(kz-\omega t)}$ \newline
+	      \phantom{ } $\hookrightarrow E_s'= E_{0s} e^{i(kz-\omega t- \pi)} = -E_s$ \newline
+	      \phantom{ } fast (i.e. $E_f \parallel \hat f, \bot \hat s$) $\rightarrow$  no change $\rightarrow$ $E_f'=E_f$\newline
+	      \vspace{1pt}\newline
+	      \textbf{Quarter wave plate}\newline
+	      \phantom{ } slow (i.e. $E_s \parallel \hat s, \bot \hat f$) $\rightarrow$ $E_s = E_{0s} e^{i(kz-\omega t)}$ \newline
+	      \phantom{ } $\hookrightarrow E_s'= E_{0s} e^{i(kz-\omega t- \frac{\pi}{2})} = -i E_s$ \newline
+	      \phantom{ } fast (i.e. $E_f \parallel \hat f, \bot \hat s$) $\rightarrow$  no change $\rightarrow$ $E_f'=E_f$\newline
+	\item Represent electromagnetic wave in coordinate system of wave plate ($\hat f$ \& $\hat s$)\newline
+	      $\underline E = \begin{bmatrix}0 \\ E_y\end{bmatrix} \rightarrow \begin{matrix} E_f = \cos\alpha E_y \\ E_s = -\sin E_y \end{matrix}$
+	\item Use transformation from step 1\newline
+	      $\begin{matrix} E_f = \cos\alpha E_y \\ E_s = -\sin E_y \end{matrix} \rightarrow \begin{matrix} E_f' = E_f =\cos\alpha E_y \\ E_s' = -E_s = \sin E_y \end{matrix}$
+	\item (optional) Convert back into original coordinate system
+	\item check whether we have a elliptical or linear polarization (if $arg(E_f') = arg(E_s') \rightarrow$ linear)
+\end{enumerate}
+
+\textbf{right \& left-handedness}
+$$  \underline{E}_x(z,t) = \underline{e}_x E_0 \cos(kz-\omega t)$$
+$$\text{and} \underline{E}_y(z,t) = \underline{e}_y E_0 \cos(kz -wt + \varphi) $$
+\begin{itemize}
+	\item For $\phi = -\pi/2, \underline{E}(z,t)$ rotates clockwise with the same frequency $\omega \longrightarrow$ \textbf{right-circularly polarised}
+	\item For $\phi = \pi/2, \underline{E}(z,t)$ rotates counter clockwise with the same frequency $\omega \longrightarrow$ \textbf{left-circularly polarised}
+\end{itemize}
+
+\vspace{2mm}
+\normalsize\textbf{Linear polarizer}\small
+\hrule
+\myBox{
+Malus'Law
+$$I(\theta) = \frac{c\varepsilon_0}{2}E_{01}^2 \cos^2\theta$$
+}
+
+\vspace{2mm}
+\normalsize\textbf{Abbreviations}\small
+\hrule
+
+\begin{tabular}{rl}
+	LPL: & Linear Polarizer         \\
+	PBS: & Polarizing beam splitter \\
+	HWP: & Half wave plate          \\
+	QWP: & Quarter wave plate       \\
+	FM:  & Flip mirror              \\
+	S:   & screen                   \\
+	DET: & Detector                 \\
+	LED: & Hmmm no idea :)
+\end{tabular}
+
+}
